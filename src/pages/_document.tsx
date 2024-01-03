@@ -7,12 +7,12 @@ export default function Document() {
     <Html lang='en'>
       <Head />
       <body className='flex flex-col min-h-screen'>
+        <Header />
         <div className='container mx-auto w-full lg:w-8/12'>
-          <Header />
           <Main />
           <NextScript />
-          <Footer />
         </div>
+        <Footer />
       </body>
     </Html>
   )
