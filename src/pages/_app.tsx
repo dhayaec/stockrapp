@@ -1,6 +1,8 @@
+import { store } from '@/redux/store'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import '../styles/globals.css'
+import { Provider } from 'react-redux'
+import '../../styles/globals.css'
 
 function App({ Component, pageProps }: AppProps) {
   const theme = '#4a90e2'
@@ -24,7 +26,9 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
 
       <div className='px-2 text-center'>
-        <Component {...pageProps} />
+        <Provider store={store}>
+          <Component {...pageProps} />
+        </Provider>
       </div>
     </>
   )

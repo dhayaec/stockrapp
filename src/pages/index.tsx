@@ -4,6 +4,7 @@ import PossibleGain from '@/components/PossibleGain'
 import Target from '@/components/Target'
 import { menuItems, MenuItemType } from '@/constants/constants'
 import type { NextPage } from 'next'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 const Home: NextPage = () => {
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
       <Gain name='Gain / Loss' />
       <NoLossBuy name="Day's Range" />
       <PossibleGain name='Possible Gain' />
+      <Link href={`/counter`}>Counter</Link>
     </div>
   )
 }

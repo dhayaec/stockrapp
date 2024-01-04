@@ -1,9 +1,7 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
-  content: [
-    './src/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
       backgroundImage: {
@@ -19,6 +17,7 @@ const config: Config = {
       green: '#84cc16',
       zinc: '#71717a',
       slate: '#64748b',
+      white: '#ffffff',
     },
   },
   plugins: [require('@tailwindcss/forms')],
