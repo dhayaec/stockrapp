@@ -1,9 +1,9 @@
 import '@testing-library/jest-dom'
 import { render } from '@testing-library/react'
-import About from './about'
+import NotFound from './404'
 
-describe('About page', () => {
+describe('NotFound page', () => {
   it('should render', () => {
-    render(<About />)
+    render(<NotFound />)
   })
 })

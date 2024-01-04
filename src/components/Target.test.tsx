@@ -2,14 +2,6 @@ import '@testing-library/jest-dom'
 import { fireEvent, render, screen } from '@testing-library/react'
 import Target from './Target'
 
-jest.mock('next/router', () => ({
-  useRouter() {
-    return {
-      pathname: '/',
-    }
-  },
-}))
-
 describe('load home page', () => {
   test('loads and displays target / stop loss', async () => {
     render(<Target name='target' />)
