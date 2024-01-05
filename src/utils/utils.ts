@@ -9,5 +9,3 @@ export const reverseStr = (str: string) => {
 
   return result
 }
-
-export const sub = (a: number, b: number) => a - b

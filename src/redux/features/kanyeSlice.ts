@@ -49,5 +49,3 @@ export const kanyeSlice = createSlice({
 })
 
 export const selectKanye = (state: RootState) => state.kanyeQuote
-
-export default kanyeSlice.reducer

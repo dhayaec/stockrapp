@@ -1,13 +1,13 @@
 import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit'
-import counterSlice from './features/counterSlice'
-import kanyeReducer from './features/kanyeSlice'
+import { counterSlice } from './features/counterSlice'
+import { kanyeSlice } from './features/kanyeSlice'
 
 export const store = configureStore({
   reducer: {
     // This is where we add reducers.
     // Since we don't have any yet, leave this empty
-    counter: counterSlice,
-    kanyeQuote: kanyeReducer,
+    counter: counterSlice.reducer,
+    kanyeQuote: kanyeSlice.reducer,
   },
 })
 
