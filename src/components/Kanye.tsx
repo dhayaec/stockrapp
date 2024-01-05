@@ -8,9 +8,15 @@ export default function Kanye() {
   return (
     <div>
       <h2>Generate random Kanye West quote</h2>
-      {pending && <p>Loading...</p>}
-      {data && <p>{data.quote}</p>}
-      {error && <p>Oops, something went wrong</p>}
+      <div className='h-60'>
+        {pending && <p>Loading...</p>}
+        {data && !pending && (
+          <blockquote className='text-4xl font-semibold'>
+            <p>{data.quote}</p>
+          </blockquote>
+        )}
+        {error && <p>Oops, something went wrong</p>}
+      </div>
       <button
         onClick={() => dispatch(getKanyeQuote())}
         disabled={pending}

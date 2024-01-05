@@ -17,7 +17,12 @@ const Home: NextPage = () => {
       <Gain name='Gain / Loss' />
       <NoLossBuy name="Day's Range" />
       <PossibleGain name='Possible Gain' />
-      <Link href={`/counter`}>Counter</Link>
+      <Link
+        className='bg-blue border-primary border rounded-full inline-flex items-center justify-center py-3 px-7 text-center text-base font-medium text-white hover:bg-blue hover:border-blue disabled:bg-gray-3 disabled:border-gray-3 disabled:text-dark-5 active:bg-blue active:border-blue'
+        href={`/counter`}
+      >
+        Counter
+      </Link>
     </div>
   )
 }
