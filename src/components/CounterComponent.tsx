@@ -1,16 +1,17 @@
 import {
   decrement,
   increment,
+  incrementAsync,
   incrementByAmount,
-  selectCount,
+  selectCountState,
 } from '@/redux/features/counterSlice'
 import { useAppDispatch, useAppSelector } from '@/redux/hooks'
-
 import { useState } from 'react'
+import CounterDisplay from './CounterDisplay'
 
 export default function CounterComponent({ name }: { name: string }) {
   const dispatch = useAppDispatch()
-  const count = useAppSelector(selectCount)
+  const counterState = useAppSelector(selectCountState)
   const [incrementAmount, setIncrementAmount] = useState<number>(0)
 
   return (
@@ -22,10 +23,7 @@ export default function CounterComponent({ name }: { name: string }) {
         {name}
       </h1>
 
-      <h2
-        data-testid='currentNumber'
-        className='text-2xl'
-      >{`The current number is ${count}`}</h2>
+      <CounterDisplay state={counterState} />
       <input
         type='text'
         className='w-full border p-2 mb-4'
@@ -54,6 +52,15 @@ export default function CounterComponent({ name }: { name: string }) {
           data-testid='decrementAmountBy1'
         >
           Decrement by 1
+        </button>
+      </div>
+      <div className='flex my-4'>
+        <button
+          className='flex-1 bg-red hover:bg-red-700 text-white font-bold py-2 px-4 rounded'
+          onClick={() => dispatch(incrementAsync(3))}
+          data-testid='incrementAsync'
+        >
+          incrementAsync by 3
         </button>
       </div>
     </div>

@@ -8,10 +8,10 @@ export default function Kanye() {
   return (
     <div>
       <h2>Generate random Kanye West quote</h2>
-      <div className='h-60'>
+      <div className='h-50'>
         {pending && <p data-testid='loading'>Loading...</p>}
         {data && !pending && (
-          <blockquote data-testid='quote' className='text-4xl font-semibold'>
+          <blockquote data-testid='quote' className='text-2xl font-semibold'>
             <p>{data.quote}</p>
           </blockquote>
         )}

@@ -16,9 +16,7 @@ describe('load home page', () => {
 
     expect(await screen.findByTestId('counter')).toHaveTextContent('counter')
 
-    expect(await screen.findByTestId('currentNumber')).toHaveTextContent(
-      `The current number is 0`
-    )
+    expect(await screen.findByTestId('currentNumber')).toHaveTextContent(`0`)
 
     fireEvent.change(await screen.findByTestId('incrementAmount'), {
       target: { value: '10' },
@@ -26,16 +24,14 @@ describe('load home page', () => {
 
     fireEvent.click(await screen.findByTestId('incrementAmountButton'))
 
-    expect(await screen.findByTestId('currentNumber')).toHaveTextContent(
-      `The current number is 10`
-    )
+    expect(await screen.findByTestId('currentNumber')).toHaveTextContent(`10`)
     fireEvent.click(await screen.findByTestId('incrementAmountBy1'))
-    expect(await screen.findByTestId('currentNumber')).toHaveTextContent(
-      `The current number is 11`
-    )
+    expect(await screen.findByTestId('currentNumber')).toHaveTextContent(`11`)
     fireEvent.click(await screen.findByTestId('decrementAmountBy1'))
+    expect(await screen.findByTestId('currentNumber')).toHaveTextContent(`10`)
+    fireEvent.click(await screen.findByTestId('incrementAsync'))
     expect(await screen.findByTestId('currentNumber')).toHaveTextContent(
-      `The current number is 10`
+      `Loading`
     )
   })
 })
