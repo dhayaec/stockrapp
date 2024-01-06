@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 const nextJest = require('next/jest')
 
 const createJestConfig = nextJest({
@@ -9,13 +8,10 @@ const createJestConfig = nextJest({
 // Add any custom config to be passed to Jest
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  moduleNameMapper: {
-    // Handle module aliases (this will be automatically configured for you soon)
-    '^@/src/(.*)$': '<rootDir>/src/$1',
-
-    '^@/pages/(.*)$': '<rootDir>/pages/$1',
-  },
-  testEnvironment: 'jest-environment-jsdom',
+  coverageProvider: 'v8',
+  testEnvironment: 'jsdom',
+  collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}'],
+  coveragePathIgnorePatterns: ['src/pages/_document.tsx', 'src/pages/_app.tsx'],
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
