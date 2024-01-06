@@ -8,7 +8,7 @@ export default function Header() {
         <div className='flex flex-col justify-center items-center m-2'>
           <Image
             src={'/icon-192x192.png'}
-            alt='Stockr'
+            alt='Stock price estimator'
             width={50}
             height={50}
           />

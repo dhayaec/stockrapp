@@ -21,7 +21,7 @@ function App({ Component, pageProps }: AppProps) {
         <meta name='apple-mobile-web-app-status-bar' content={theme} />
         <meta
           name='viewport'
-          content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1'
+          content='width=device-width, initial-scale=1, maximum-scale=5, user-scalable=1'
         />
       </Head>
 

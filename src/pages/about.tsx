@@ -1,6 +1,12 @@
+import Head from 'next/head'
+
 export default function About() {
   return (
-    <div>
+    <>
+      <Head>
+        <title>About</title>
+        <meta name='description' content='About' />
+      </Head>
       <div className='px-2'>
         <h1 className='text-center text-xl md:text-2xl'>About Us</h1>
 
@@ -16,6 +22,6 @@ export default function About() {
           these elements are typically found on the About page of your website.
         </p>
       </div>
-    </div>
+    </>
   )
 }

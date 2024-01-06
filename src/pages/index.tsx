@@ -3,11 +3,19 @@ import NoLossBuy from '@/components/NoLossBuy'
 import PossibleGain from '@/components/PossibleGain'
 import Target from '@/components/Target'
 import type { NextPage } from 'next'
+import Head from 'next/head'
 import Link from 'next/link'
 
 const Home: NextPage = () => {
   return (
     <main>
+      <Head>
+        <title>Stockr</title>
+        <meta
+          name='description'
+          content='Stockr Home'
+        />
+      </Head>
       <Target name='Target / Stop Loss' />
       <Gain name='Gain / Loss' />
       <NoLossBuy name="Day's Range" />
