@@ -11,10 +11,10 @@ const config: Config = {
       },
     },
     colors: {
-      blue: '#0ea5e9',
-      red: '#ef4444',
+      blue: '#1d4ed8',
+      red: '#b91c1c',
       purple: '#7e5bef',
-      green: '#84cc16',
+      green: '#4d7c0f',
       zinc: '#71717a',
       slate: '#64748b',
       white: '#ffffff',

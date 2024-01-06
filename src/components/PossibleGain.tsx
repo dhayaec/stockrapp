@@ -41,7 +41,7 @@ export default class PossibleGain extends Component<PossibleGainProps, any> {
               value={price || ''}
               type='number'
               name='price'
-              id='price'
+              id='gainPrice'
               onChange={this.onChange}
               placeholder='Price'
               className='w-full'

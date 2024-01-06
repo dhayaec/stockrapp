@@ -24,13 +24,17 @@ export default function CounterComponent({ name }: { name: string }) {
       </h1>
 
       <CounterDisplay state={counterState} />
-      <input
-        type='text'
-        className='w-full border p-2 mb-4'
-        value={incrementAmount || ''}
-        onChange={(e) => setIncrementAmount(Number(e.target.value))}
-        data-testid='incrementAmount'
-      />
+      <label>
+        Amount to increment
+        <input
+          type='text'
+          className='w-full border p-2 mb-4'
+          value={incrementAmount || ''}
+          onChange={(e) => setIncrementAmount(Number(e.target.value))}
+          data-testid='incrementAmount'
+          id='incrementAmount'
+        />
+      </label>
       <div className='flex space-x-4'>
         <button
           className='flex-1 bg-blue hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
@@ -60,7 +64,7 @@ export default function CounterComponent({ name }: { name: string }) {
           onClick={() => dispatch(incrementAsync(3))}
           data-testid='incrementAsync'
         >
-          incrementAsync by 3
+          incrementAsync by 4
         </button>
       </div>
     </div>
