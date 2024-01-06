@@ -3,7 +3,7 @@ import { store } from '@/redux/store'
 import '@testing-library/jest-dom'
 import { render } from '@testing-library/react'
 import { Provider } from 'react-redux'
-import Counter from './counter'
+import Counter from '../src/pages/counter'
 
 describe('Counter page', () => {
   it('should render', () => {

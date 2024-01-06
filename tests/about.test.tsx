@@ -1,9 +1,9 @@
 import '@testing-library/jest-dom'
 import { render } from '@testing-library/react'
-import Index from './'
+import About from '../src/pages/about'
 
-describe('Index page', () => {
+describe('About page', () => {
   it('should render', () => {
-    render(<Index />)
+    render(<About />)
   })
 })

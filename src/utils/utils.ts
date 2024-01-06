@@ -24,7 +24,7 @@ export const mergeSortedArray = (arr1: number[], arr2: number[]) => {
       j++
     }
   }
-
+  console.log({ i, l: arr1.length })
   while (i < arr1.length) {
     mergedArray.push(arr1[i])
     i++

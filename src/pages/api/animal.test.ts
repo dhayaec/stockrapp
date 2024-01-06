@@ -1,5 +1,5 @@
 import handleAnimal from '@/pages/api/animal'
-import { testHandler } from './jest/__mocks__/handlerUtils'
+import { testHandler } from '../../../jest/__mocks__/handlerUtils'
 
 describe('/api/[animal]', () => {
   test('should returns an object with a name', async () => {
